@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import "../styles/tactile.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Chart colours. Categories and asset classes read these, so they follow light and dark mode. */
+:root {
+  --chart-income: var(--tactile-success);
+  --chart-spend: var(--tactile-accent);
+  --chart-1: #3f6fd8;
+  --chart-2: #1f9d8f;
+  --chart-3: #e0742a;
+  --chart-4: #8a5cd6;
+  --chart-5: #c9a227;
+  --chart-6: #2b9bd1;
+  --chart-7: #d6457f;
+  --chart-8: #6b8f3a;
+  --chart-9: #b0603a;
+  --chart-10: #7b7f8c;
+}
+
+.dark {
+  --chart-1: #6c93f0;
+  --chart-2: #3cc3b2;
+  --chart-3: #f39550;
+  --chart-4: #a882ef;
+  --chart-5: #e2c04a;
+  --chart-6: #56b9ea;
+  --chart-7: #ef6aa0;
+  --chart-8: #8fb85a;
+  --chart-9: #d8835c;
+  --chart-10: #9a9eab;
+}
+
+body {
+  background: var(--tactile-bg);
+  color: var(--tactile-fg);
+}
